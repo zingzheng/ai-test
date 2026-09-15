@@ -72,7 +72,7 @@
 
 ```
 1.  导论：为什么测评是 AI 工程的第一性问题
-    - 能力主张 vs 可验证证据；三种测评对象（模型 / 应用 / Agent）
+    - 能力主张 vs 可验证证据；三种测评对象（模型级 / 应用级 / 系统-业务级）
     - 术语速查：benchmark / eval / metric / accuracy / perplexity / pass@k / pass^k / contamination
     - 模型训练侧在测评里的位置（一段话，细节见附录 D）
 2.  评测方法论全景：自动评测 / 人工评测 / A/B Test / LLM-as-Judge   ← JD 第一条
@@ -123,7 +123,7 @@
     - Humanloop 退场案例（选型风险）
     - OTel GenAI Semantic Conventions：trace 即评测数据源
 10. 大厂方法论拆解
-    - Anthropic 的 8 步路线与三类 grader（code / model / human）
+    - Anthropic 的 Step 0–8 路线与三类 grader（code / model / human）
     - OpenAI Evals（含 2026-11 停服与迁移）
     - Google rubrics + AutoSxS；Azure 内置 evaluator
     - 共识与分歧
@@ -159,7 +159,7 @@
 
 ```
 A. 术语表（中英对照，含一句话定义 + 来源）
-B. 权威来源总清单（按主题索引，含 URL + 访问日期 + 验证状态）
+B. 权威来源总清单（按主题索引，含 URL + 验证状态；逐条访问日期见 docs/research/）
 C. 时效地图：已停更 / 已换代 / 已更名 / 已关停 速查
 D. 模型训练与调优速览（了解即可）
    - RL 术语与评测指标 / 经典算法一页纸
@@ -200,9 +200,9 @@ ai-test/
 │   │   ├── 06-domain-metrics.md         # 推荐 / CV / NLP 指标
 │   │   └── 07-rl-training.md            # RL + RLHF + 大模型调优
 │   └── notes/                 # 正式笔记（Phase 1+ 逐步填充）
-│       ├── part1-基础/
-│       ├── part2-企业落地/
-│       └── part3-前沿/
+│       ├── part1-basics/
+│       ├── part2-enterprise/
+│       └── part3-frontier/
 └── labs/                      # （不做）曾计划动手实验，2026-09-15 拍板取消
 ```
 

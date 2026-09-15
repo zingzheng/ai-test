@@ -1,6 +1,6 @@
 # 第 13 章 端到端落地蓝图
 
-> **一句话结论**：把评测落地的核心不是"买一个平台"，而是一条可复制的循环——**30–50 例真实数据起步 → 域专家 pass/fail + critique → 校准 judge → 接进 CI → 生产监控回灌**，让评测从一次性验收变成持续迭代的引擎。
+> **一句话结论**：把评测落地的核心不是"买一个平台"，而是一条可复制的循环——**约 30 例真实数据起步 → 域专家 pass/fail + critique → 校准 judge → 接进 CI → 生产监控回灌**，让评测从一次性验收变成持续迭代的引擎。
 
 ---
 
@@ -9,14 +9,14 @@
 ## 13.1 一个可复制的五步流程
 
 ```
-① 30–50 例起步 → ② 域专家 pass/fail + critique → ③ judge 校准
+① 约 30 例起步 → ② 域专家 pass/fail + critique → ③ judge 校准
         ↑                                                    ↓
         └──────── ⑤ 生产监控回灌 ←────── ④ 进 CI ────────────┘
 ```
 
-**第 1 步：30–50 例起步。** 输入是**真实 trace**（生产日志、用户反馈、已知失败案例），输出是一份小而真实的初始评测集与初步失败模式。Hamel Husain 明确建议从约 30 例开始，而不是先攒几千条。来源：[Hamel Husain《LLM-as-a-Judge 完整指南》](https://hamel.dev/blog/posts/llm-judge/)、[Your AI Product Needs Evals](https://hamel.dev/blog/posts/evals/)。
+**第 1 步：约 30 例起步。** 输入是**真实 trace**（生产日志、用户反馈、已知失败案例），输出是一份小而真实的初始评测集与初步失败模式。Hamel Husain 明确建议从约 30 例开始，而不是先攒几千条；Anthropic 给出的经验区间是 20–50 例。来源：[Hamel Husain《LLM-as-a-Judge 完整指南》](https://hamel.dev/blog/posts/llm-judge/)、[Your AI Product Needs Evals](https://hamel.dev/blog/posts/evals/)。
 
-**第 2 步：域专家判 pass/fail 并写 critique。** 输入是第 1 步的评测集，输出是**专家标注 + 每条失败的具体批评**。为什么要专家而不是众包？因为这一步产出的是**黄金标准**，要给后面的 judge 当校准锚点；Anthropic 也把 grader 分 code / model / human 三类，human 的价值在于灵活与权威。来源：[Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents)。
+**第 2 步：域专家判 pass/fail 并写 critique。** 输入是第 1 步的评测集，输出是**专家标注 + 每条失败的具体批评**。为什么要专家而不是众包？因为这一步产出的是**黄金标准**，要给后面的 judge 当校准锚点；Anthropic 也把 grader 分 code / model / human 三类，human 的价值在于**权威（黄金标准）并能校准 model grader**，代价是贵、慢、难规模化（"灵活"是 model grader 的优点，别张冠李戴）。来源：[Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents)。
 
 **第 3 步：校准 judge。** 输入是专家标注，输出是一个**与专家对齐、且报出 precision/recall 的 judge**。验证每类失败模式建议用约 100 例。来源：[Hamel Husain（同前）](https://hamel.dev/blog/posts/llm-judge/)。
 
@@ -67,7 +67,7 @@
 - **备案与评估**：面向公众提供生成式 AI 服务须遵守《[生成式人工智能服务管理暂行办法](https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm)》（2023-08-15 施行）；具舆论属性/社会动员能力的服务须做**安全评估 + 算法备案**。
 - **技术基线**：[GB/T 45654-2025](https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=F67D3F376E0A0A0FF5317FB36B32A30A) 是现行安全国家推荐标准；[TC260 治理框架 3.0](https://www.tc260.org.cn/) 为 2026 最新动态。
 
-> 来源衔接：[第 8 章 安全与合规速览](08-safety-compliance.md)；国际侧可对照 [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework) 的 Measure 与 EU AI Act 时间线。
+> 来源衔接：[第 8 章 安全与合规速览](../part1-basics/08-safety-compliance.md)；国际侧可对照 [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework) 的 Measure 与 EU AI Act 时间线。
 
 ## 13.6 回到第 1 章：评测如何成为迭代引擎
 

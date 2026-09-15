@@ -22,7 +22,7 @@
 
 ## 8.2 应用安全风险清单：OWASP LLM Top 10（2026 版）
 
-OWASP 的 LLM 应用风险清单是应用侧最通用的"体检表"。**2026 版已于 2026-08-04 发布**，风险排序与范围都有更新：
+OWASP 的 LLM 应用风险清单是应用侧最通用的"体检表"。**2026 版已于 2026-08-03 发布**（以官方发布页日期为准），风险排序与范围都有更新：
 
 1. Prompt Injection（提示注入）
 2. Sensitive Information Disclosure（敏感信息泄露）
@@ -40,9 +40,9 @@ OWASP 的 LLM 应用风险清单是应用侧最通用的"体检表"。**2026 版
 
 ## 8.3 国际标准与法规一句话版
 
-- **NIST AI RMF**：美国自愿意性 AI 风险管理框架，四大功能 **Govern / Map / Measure / Manage**。截至 2026-09 的 1.0 版正在修订。配套的[生成式 AI Profile（NIST.AI.600-1）](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf)给出生成式 AI 的独有风险画像。来源：[NIST AI RMF 主页](https://www.nist.gov/itl/ai-risk-management-framework)／[AI RMF 1.0 PDF](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)。
+- **NIST AI RMF**：美国自愿性 AI 风险管理框架，四大功能 **Govern / Map / Measure / Manage**。截至 2026-09 的 1.0 版正在修订。配套的[生成式 AI Profile（NIST.AI.600-1）](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf)给出生成式 AI 的独有风险画像。来源：[NIST AI RMF 主页](https://www.nist.gov/itl/ai-risk-management-framework)／[AI RMF 1.0 PDF](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)。
 - **EU AI Act**：全球首部综合性 AI 法规（Regulation (EU) 2024/1689），按风险分级（不可接受/高风险/透明度/最小风险）。**时间线已被 AI Omnibus 简化修法改写**——高风险系统的 Annex III 敏感领域推迟到 **2027-12-02**，Annex I 产品嵌入式推迟到 **2028-08-02**；新增禁止的第 9 类（未经同意的色情/CSAM）自 **2026-12-02** 适用。来源：[欧委会官方页](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)／[实施时间线](https://artificialintelligenceact.eu/implementation-timeline/)。
-- **ISO/IEC 42001**（AI 管理体系）等 ISO 标准：本次因 iso.org 反爬**未能验证**，若要引用请以浏览器核实为准（本次未能验证）。
+- **ISO/IEC 42001**（AI 管理体系）等 ISO 标准：本次因 iso.org 反爬**未能验证**，若要引用请以浏览器核实为准。
 
 ## 8.4 中国本土合规
 

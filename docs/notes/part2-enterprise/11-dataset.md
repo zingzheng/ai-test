@@ -4,7 +4,7 @@
 
 ---
 
-> 前面几章讲的是"用什么方法评"（第 2 章）和"评什么对象"（第 3–10 章）。这一章回到所有评测的共同底座：**数据**。没有一套可信、贴业务、持续更新的评测集，再好的 judge 和 A/B 实验也评不出真东西。
+> 前面几章讲的是"用什么方法评"（第 2 章）、"评什么对象"（第 3–8 章）与"用什么工具/方法论"（第 9–10 章）。这一章回到所有评测的共同底座：**数据**。没有一套可信、贴业务、持续更新的评测集，再好的 judge 和 A/B 实验也评不出真东西。
 
 ## 11.1 评测集从哪来：公开基准 vs 自建评测集的分工
 
@@ -67,7 +67,7 @@ Agent 评测综述把这类"应用级基准"与"通用能力基准"明确区分�
 
 ## 11.6 起步规模建议
 
-最后一个反直觉但被反复验证的建议：**不要一开始就造几千条的大评测集**。Hamel 的经验值是**从约 30 例起步**——先跑起来、先让人反复看数据，随着失败模式暴露再扩；若要验证 judge 的每一类失败模式，则建议约 **100 例**量级。Anthropic 的"从 0 到 1 的 8 步路线"同样主张小步开始、逐步加严。
+最后一个反直觉但被反复验证的建议：**不要一开始就造几千条的大评测集**。Hamel 的经验值是**从约 30 例起步**——先跑起来、先让人反复看数据，随着失败模式暴露再扩；若要验证 judge 的每一类失败模式，则建议约 **100 例**量级。Anthropic 的"从 0 到 1 的路线（原文 Step 0–8）"同样主张小步开始、逐步加严。
 
 小规模高频迭代优于大规模一次到位：前者的反馈闭环短，能持续纠偏；后者往往一次就做错方向，且维护成本高到没人愿意更新。
 
@@ -88,7 +88,7 @@ Agent 评测综述把这类"应用级基准"与"通用能力基准"明确区分�
 ## 来源
 
 - [Survey on Evaluation of LLM-based Agents](https://arxiv.org/abs/2503.16416) — 访问 2026-09-15 — ✅ — 应用级 vs 通用基准
-- [Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) — 访问 2026-09-15 — ✅ — capability vs regression evals、8 步路线
+- [Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) — 访问 2026-09-15 — ✅ — capability vs regression evals、Step 0–8 路线
 - [Your AI Product Needs Evals](https://hamel.dev/blog/posts/evals/) — 访问 2026-09-15 — ✅ — 先 logging、移除看数据的摩擦
 - [Using LLM-as-a-Judge: A Complete Guide](https://hamel.dev/blog/posts/llm-judge/) — 访问 2026-09-15 — ✅ — 起点约 30 例、验证 judge 约 100 例
 - [Langfuse Evaluation](https://langfuse.com/docs/evaluation/overview) — 访问 2026-09-15 — ✅ — Trace→Dataset→Experiment 循环

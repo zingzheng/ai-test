@@ -14,7 +14,7 @@
 
 ## 14.2 只看精度不看成本：《AI Agents That Matter》
 
-这篇论文的批评有两层。第一层是**只盯 accuracy、忽略 cost**：一个 Agent 多调十倍工具、多烧十倍 token 换来的 2 分提升，被当成纯粹的进步来宣传，而部署方一眼就会否掉。第二层是**holdout 不足**：Agent 基准常被反复调参、针对性优化，等于把测试集当训练集用，成绩虚高。
+这篇论文的批评有两层。第一层是**只盯 accuracy、忽略 cost**：一个 Agent 多调十倍工具、多烧十倍 token 换来的几个百分点提升（示意），被当成纯粹的进步来宣传，而部署方一眼就会否掉。第二层是**holdout 不足**：Agent 基准常被反复调参、针对性优化，等于把测试集当训练集用，成绩虚高。
 
 论文的总判断是：这一领域存在 **"pervasive lack of reproducibility"（普遍的可复现性缺失）**。它因此成为本主题最常被引用的锚点。来源：[AI Agents That Matter](https://arxiv.org/abs/2407.01502)。
 
@@ -39,7 +39,7 @@ Anthropic 在 2026-02-05 的工程博客里给出了一个残酷的对照实验�
 前两节说的是"怎么用"，这一节说的是**考卷本身印错了**。ABC 论文点名批评现存 Agentic benchmark 的严谨性：
 
 - **SWE-bench Verified**：测试用例（test cases）不足，导致通过率被高估。
-- **TAU-bench**：把**空响应也判定为成功**，直接制造假阳性。
+- **TAU-bench**（原 τ-bench，现役为 τ³-bench）：把**空响应也判定为成功**，直接制造假阳性。
 
 论文估计，这些缺陷可造成**相对误差高达 100%**——也就是"成绩可能翻倍地错"。为此它提出 **Agentic Benchmark Checklist（ABC）**，在 CVE-Bench 上把高估降低了 **33%**。来源：[Agentic Benchmark Checklist](https://arxiv.org/abs/2507.02825)（arXiv 2507.02825，v5 2025-08）。
 

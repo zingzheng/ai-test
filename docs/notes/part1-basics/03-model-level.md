@@ -50,6 +50,7 @@
 
 > 来源：[BIG-bench 论文](https://arxiv.org/abs/2206.04615) ／ [BIG-bench 仓库（已归档）](https://github.com/google/BIG-bench) — ✅
 > 来源：[HF Open LLM Leaderboard（已终止）](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard) — ✅
+> 来源：[HELM 官网](https://crfm.stanford.edu/helm/)（2026-06-01 起维护模式） ／ [HELM 论文](https://arxiv.org/abs/2211.09110) — ⚠️/✅
 
 ## 3.4 评测框架与平台：三个定位不同的角色
 

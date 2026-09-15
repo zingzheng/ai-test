@@ -88,7 +88,7 @@ Anthropic 在讲 Agent 评测时，把 grader（评分者）分为 code / model 
 
 **什么时候用**：开放生成、对话、指令遵循等没有唯一答案的任务；以及需要规模化人工判断的场合。
 
-**注意**：judge 的可靠性高度依赖任务设计与校准。其偏差、校准方法（Critique Shadowing）与分辨率问题，将在**第 4 章**和**第 15 章**深入。
+**注意**：judge 的可靠性高度依赖任务设计与校准。其典型偏差见**第 4 章**，分辨率与自动化见**第 15 章**，工程化校准方法（Critique Shadowing）见**第 13 章**。
 
 > 来源：[Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena](https://arxiv.org/abs/2306.05685)（NeurIPS 2023）— ✅
 

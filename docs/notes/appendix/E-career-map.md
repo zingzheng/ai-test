@@ -70,7 +70,7 @@
 3. p 值最常见的误用是什么？——它不是「H0 为真的概率」；显著性 ≠ 效应大小。[第 2 章](../part1-basics/02-methodology.md) §2.4
 4. SRM 是什么？为什么出现就该停？——样本比例失配，是数据质量发烧症状。[第 2 章](../part1-basics/02-methodology.md) §2.4
 5. 同时看 20 个指标会怎样？CUPED 解决什么？——多重比较需校正；CUPED 用实验前协变量降方差。[第 2 章](../part1-basics/02-methodology.md) §2.4
-6. LLM-judge 与人类一致性有多高？有哪些系统性偏差？——>80%，但位置 / 冗长 / 自我增强偏差。[第 4 章](../part1-basics/04-subjective-judge.md) §4.5
+6. LLM-judge 与人类一致性有多高？有哪些系统性偏差？——>80%，但位置 / 冗长 / 自我增强偏差。[第 4 章](../part1-basics/04-subjective-judge.md) §4.3、§4.5
 
 ### B. LLM 评测与基准（5 题）
 

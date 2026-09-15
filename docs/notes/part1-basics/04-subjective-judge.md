@@ -82,7 +82,7 @@ G-Eval 是把"让模型打分"做得更结构化的一篇代表作：先用 **Co
 - 开放生成没有唯一答案，BLEU/ROUGE 等字面指标会失灵；指标演进为 n-gram → 学习型 → LLM 裁判三段。
 - Arena AI（原 Chatbot Arena / LMArena，**品牌已更名**）用匿名 pairwise 投票 + Bradley-Terry/Elo 聚合人类偏好，但存在 Leaderboard Illusion 风险。
 - MT-Bench 证明强 LLM 裁判与人类一致率 **>80%**，是 LLM-as-Judge 成立的依据，前提是任务设计与校准到位。
-- G-Eval 用 CoT + form-filling 结构化打分，并最早点出"LLM 偏好 LLM 文本"的偏差。
+- G-Eval 用 CoT + form-filling 结构化打分，并较早点出"LLM 偏好 LLM 文本"的偏差。
 - 三大偏差必须记住：**位置偏差、冗长偏差、自我增强偏差**；常用缓解是互换位置取平均、rubric 惩罚冗余、异族模型当裁判。
 - 选型原则：有确定答案用自动评测，高价值用人工定标准，LLM-as-Judge 负责规模化，终极裁决交给在线实验。
 

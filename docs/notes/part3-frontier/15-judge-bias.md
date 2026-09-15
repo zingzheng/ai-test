@@ -78,6 +78,6 @@
 - [Hamel Husain《LLM-as-a-Judge 完整指南》](https://hamel.dev/blog/posts/llm-judge/) — 访问 2026-09-15 — ✅ — precision/recall、criteria drift（引 Shankar）
 - [Eugene Yan《Evaluating LLM-Evaluators》](https://eugeneyan.com/writing/llm-evaluators/) — 访问 2026-09-15 — ✅ — 分类指标 vs 相关指标（κ / τ / ρ）
 - [Precision/Recall（Google 教程）](https://developers.google.com/machine-learning/crash-course/classification/precision-and-recall) — 访问 2026-09-15 — ✅ — precision/recall 定义
-- [去偏即测量干预（judge 分辨率）](https://arxiv.org/abs/2609.12439) — 访问 2026-09-15 — ⚠️ — 去偏压低分辨率、Tie cost（2026-09 预印本，待同行评审）
+- [去偏即测量干预（judge 分辨率）](https://arxiv.org/abs/2609.12439) — 访问 2026-09-15 — ✅ — 去偏压低分辨率、Tie cost（已被 EMNLP 2026 接收）
 - [LLM-as-a-Judge 综述](https://arxiv.org/abs/2411.15594) — 访问 2026-09-15 — ✅ — 可靠 judge：一致性、偏差缓解、场景适配
 - [Agent-as-Judge](https://arxiv.org/abs/2410.10934) — 访问 2026-09-15 — ✅ — 用 agent 评 agent、全过程反馈、DevAI

@@ -11,7 +11,7 @@
 | 术语 | 一句话含义 | 关键提醒 |
 |---|---|---|
 | agent（智能体） | 做决策、采取动作的一方 | 在 RLHF 里，被训练的 LLM 就是 agent |
-| environment（环境） | agent 之外、对其动作给出反馈的部分 | 标准接口是 `reset()` / `step()`，返回 observation、reward、terminated、truncated、info |
+| environment（环境） | agent 之外、对其动作给出反馈的部分 | 标准接口是 `reset()` / `step()`；`step()` 返回五元组 observation、reward、terminated、truncated、info |
 | policy（策略，π） | 从状态到动作的映射（或动作分布） | RLHF 优化的就是这个策略 |
 | reward（奖励） | 每一步环境的即时标量反馈 | 它是**信号**，不是目标本身 |
 | episode（回合） | 从开始到终止的一次完整交互 | 回合制任务才有明确边界 |
@@ -97,7 +97,9 @@ HF TRL 的 Reward Trainer 在实践中记录三类指标：
 | LoRA | 冻结原权重、只学低秩矩阵，可训练参数降约 1 万倍且无额外推理延迟 | [LoRA](https://arxiv.org/abs/2106.09685) |
 | QLoRA | 4-bit NF4 + 双量化 + paged optimizer，进一步压低显存 | [QLoRA](https://arxiv.org/abs/2305.14314) |
 
-> 来源：[PEFT 总览](https://huggingface.co/docs/peft/index)、[PEFT 方法分类](https://huggingface.co/docs/peft/main/en/methods/overview)、[PEFT 快速上手](https://huggingface.co/docs/peft/quicktour)（adapter 仅约 0.04% 可训练参数） — ✅
+> 来源：[PEFT 总览](https://huggingface.co/docs/peft/index)、[PEFT 方法分类](https://huggingface.co/docs/peft/main/en/methods/overview)、[PEFT 快速上手](https://huggingface.co/docs/peft/quicktour)（其中 LoRA 示例配置的可训练参数占比低至约 0.04%） — ✅
+>
+> 注意：上表 Adapter 的 3.6% 出自 Houlsby 等人 2019 年的原始论文口径；PEFT 文档里的 0.04% 是**某个 LoRA 配置**的示例值，两者不是同一方法，不要混用。
 
 ## D.8 调优之后怎么评
 

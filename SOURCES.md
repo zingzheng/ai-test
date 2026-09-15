@@ -57,8 +57,8 @@
 |---|---|---|
 | C-Eval | https://arxiv.org/abs/2305.08322 ／ https://github.com/hkust-nlp/ceval | ✅ |
 | CMMLU | https://arxiv.org/abs/2306.09212 ／ https://github.com/haonan-li/CMMLU | ✅ |
-| SuperCLUE | https://github.com/CLUEbenchmark/SuperCLUE | ✅ |
-| FlagEval | https://github.com/FlagOpen/FlagEval | ✅ |
+| SuperCLUE | https://github.com/CLUEbenchmark/SuperCLUE ／ https://www.superclueai.com/ | ✅/⚠️ |
+| FlagEval | https://github.com/FlagOpen/FlagEval ／ https://flageval.baai.ac.cn/ | ✅/⚠️ |
 
 ## F. RAG 测评
 
@@ -66,6 +66,10 @@
 |---|---|---|
 | RAGAS（论文） | https://arxiv.org/abs/2309.15217 | ✅ |
 | RAGAS（指标文档） | https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/ | ✅ |
+| RAGAS · Faithfulness | https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/faithfulness/ | ✅ |
+| RAGAS · Answer Relevancy | https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/answer_relevance/ | ✅ |
+| RAGAS · Context Precision | https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/context_precision/ | ✅ |
+| RAGAS · Context Recall | https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/context_recall/ | ✅ |
 | TruLens RAG Triad | https://www.trulens.org/getting_started/core_concepts/rag_triad/ | ✅ |
 | TruLens（仓库） | https://github.com/truera/trulens | ✅ |
 | ARES（论文） | https://arxiv.org/abs/2311.09476 | ✅ |
@@ -97,6 +101,7 @@
 | JailbreakBench | https://jailbreakbench.github.io/ ／ https://arxiv.org/abs/2404.01318 | ✅ |
 | HarmBench | https://arxiv.org/abs/2402.04249 ／ https://github.com/centerforaisafety/HarmBench | ✅ |
 | AdvBench | https://github.com/llm-attacks/llm-attacks | ✅ |
+| GCG（对抗攻击原论文） | https://arxiv.org/abs/2307.15043 | ✅（源自 research/03） |
 | Anthropic Red-teaming | https://arxiv.org/abs/2209.07858 | ✅ |
 | NVIDIA Garak | https://github.com/NVIDIA/garak ／ https://arxiv.org/abs/2406.11036 | ✅ |
 | Microsoft PyRIT | https://github.com/microsoft/PyRIT | ✅ |
@@ -109,6 +114,8 @@
 | 主题 | 来源 | 状态 |
 |---|---|---|
 | NIST AI RMF | https://www.nist.gov/itl/ai-risk-management-framework | ✅ |
+| NIST AI RMF 1.0 PDF | https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf | ✅ |
+| TC260 治理框架 3.0（新闻页） | https://www.tc260.org.cn/tc260/xwdt1/202609/d513a007d04347f58e483fabaefb34b8.shtml | ✅ |
 | NIST GenAI Profile（AI 600-1） | https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf | ⚠️ |
 | ISO/IEC 42001 | https://www.iso.org/standard/42001 | ❌（403） |
 | ISO/IEC 23894 | https://www.iso.org/standard/77304.html | ❌（403） |
@@ -166,7 +173,7 @@
 | AI Agents That Matter（成本/可复现性） | https://arxiv.org/abs/2407.01502 | ✅ |
 | Agent-as-Judge | https://arxiv.org/abs/2410.10934 | ✅ |
 | Agentic Benchmark Checklist（ABC） | https://arxiv.org/abs/2507.02825 | ✅ |
-| 去偏即测量干预（judge 分辨率） | https://arxiv.org/abs/2609.12439 | ✅ |
+| 去偏即测量干预（judge 分辨率） | https://arxiv.org/abs/2609.12439 | ✅（已被 EMNLP 2026 接收） |
 
 ## N. 传统 ML 指标
 
@@ -188,6 +195,8 @@
 | MRR | https://en.wikipedia.org/wiki/Mean_reciprocal_rank | ✅ |
 | Learning to Rank | https://en.wikipedia.org/wiki/Learning_to_rank | ✅ |
 | 教材：ranked retrieval 评测 | https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-ranked-retrieval-results-1.html | ✅ |
+| Precision and Recall（概念页） | https://en.wikipedia.org/wiki/Precision_and_recall | ✅ |
+| 阈值与混淆矩阵（Google 教程） | https://developers.google.com/machine-learning/crash-course/classification/thresholding | ✅ |
 
 ## O. A/B Test（在线实验）
 
@@ -225,6 +234,7 @@
 | CLIPScore（arXiv 2104.08718） | https://arxiv.org/abs/2104.08718 | ✅ |
 | SSIM（scikit-image） | https://scikit-image.org/docs/stable/auto_examples/transform/plot_ssim.html | ✅ |
 | ImageNet | https://www.image-net.org/ | ✅ |
+| ILSVRC 官方挑战页 | https://www.image-net.org/challenges/LSVRC/ | ✅ |
 | ILSVRC 论文 | https://arxiv.org/abs/1409.0575 | ✅ |
 | BLEU（Papineni 2002） | https://aclanthology.org/P02-1040/ | ✅ |
 | ROUGE（Lin 2004） | https://aclanthology.org/W04-1013/ | ✅ |
@@ -255,6 +265,8 @@
 | 摘要 RLHF（Stiennon 2020） | https://arxiv.org/abs/2009.01325 | ✅ |
 | DPO | https://arxiv.org/abs/2305.18290 | ✅ |
 | Constitutional AI | https://arxiv.org/abs/2212.08073 | ✅ |
+| Anthropic CAI 官方介绍 | https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback | ✅ |
+| Q-learning（概念页） | https://en.wikipedia.org/wiki/Q-learning | ✅ |
 | reward model 训练（HF TRL） | https://huggingface.co/docs/trl/main/en/reward_trainer | ✅ |
 | reward hacking 定义 | https://arxiv.org/abs/2209.13085 | ✅ |
 | reward overoptimization 缩放律 | https://arxiv.org/abs/2210.10760 | ✅ |

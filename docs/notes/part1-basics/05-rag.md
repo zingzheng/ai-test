@@ -6,7 +6,7 @@
 
 ## 5.1 为什么应用级测评 ≠ 模型级测评
 
-第 1 章把测评对象分成三类：模型级、应用级、系统级。模型级回答"这个模型有多聪明"，用 MMLU 之类的固定考卷即可；但**RAG 是一个由你亲手搭出来的系统**，它的效果不只取决于底层模型，还取决于你的切分策略、向量检索、prompt、重排等一大堆工程选择。
+第 1 章把测评对象分成三类：模型级、应用级、系统/业务级。模型级回答"这个模型有多聪明"，用 MMLU 之类的固定考卷即可；但**RAG 是一个由你亲手搭出来的系统**，它的效果不只取决于底层模型，还取决于你的切分策略、向量检索、prompt、重排等一大堆工程选择。
 
 > 来源：[A Survey on Evaluation of Large Language Models](https://arxiv.org/abs/2307.03109)
 
@@ -30,7 +30,7 @@ TruLens 提出的 RAG 三元组，用三个问题覆盖一条 RAG 链：
 
 ## 5.3 RAGAS 四指标
 
-RAGAS 是一个 **reference-free（无需人工标注标准答案）** 的 RAG 评测框架，覆盖检索质量与生成忠实度。它最常被引用的四个核心指标如下。
+RAGAS 是一个覆盖检索与生成两端的 RAG 评测框架。它的生成类指标（Faithfulness、Answer Relevancy）**无需人工标注标准答案（reference-free）**，而检索类指标（Context Recall）仍需参考答案才能计算。它最常被引用的四个核心指标如下。
 
 > 来源：[RAGAS 论文](https://arxiv.org/abs/2309.15217)
 
@@ -129,5 +129,5 @@ RAG 的检索组件通常还会看 NDCG@k、Recall@k、MRR 等经典排序指标
 - [BEIR 论文](https://arxiv.org/abs/2104.08663) — 访问 2026-09-15 — ✅ — 异构零样本检索评测
 - [BEIR 仓库](https://github.com/UKPLab/beir) — 访问 2026-09-15 — ✅
 - [beir-cellar](https://github.com/beir-cellar/beir) — 访问 2026-09-15 — ✅
-- [A Survey on Evaluation of Large Language Models](https://arxiv.org/abs/2307.03109) — 访问 2026-09-15 — ✅ — 三类评测对象框架
+- [A Survey on Evaluation of Large Language Models](https://arxiv.org/abs/2307.03109) — 访问 2026-09-15 — ✅ — 评测 what / where / how 框架
 - [Survey on Evaluation of LLM-based Agents](https://arxiv.org/abs/2503.16416) — 访问 2026-09-15 — ✅ — 应用级/组件级方法论总纲

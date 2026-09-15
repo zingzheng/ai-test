@@ -43,10 +43,10 @@
 | 英文 | 中文 | 一句话定义 | 来源 |
 |---|---|---|---|
 | RAG Triad | RAG 三元组 | 用 Context Relevance、Groundedness、Answer Relevance 三问定位“检索错还是生成错”的评测框架 | [TruLens RAG Triad](https://www.trulens.org/getting_started/core_concepts/rag_triad/) |
-| faithfulness | 忠实度 | 生成答案是否只依据检索到的上下文、不凭空捏造内容 | [RAGAS Faithfulness](https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/faithfulness/) |
-| groundedness | 有据性 | 答案中的陈述是否可由给定上下文支持，是 RAG Triad 里的幻觉检测维度 | [TruLens RAG Triad](https://www.trulens.org/getting_started/core_concepts/rag_triad/) |
+| faithfulness | 忠实度 | 生成答案是否只依据检索到的上下文、不凭空捏造内容（RAGAS 框架用语） | [RAGAS Faithfulness](https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/faithfulness/) |
+| groundedness | 有据性 | 答案中的陈述是否可由给定上下文支持，是 RAG Triad 里的幻觉检测维度（TruLens 框架用语） | [TruLens RAG Triad](https://www.trulens.org/getting_started/core_concepts/rag_triad/) |
 | answer relevance | 答案相关性 | 生成的答案是否切题、真正回应了用户的问题 | [RAGAS Answer Relevancy](https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/answer_relevance/) |
-| context precision / context recall | 上下文精确率 / 召回率 | 检索到的上下文中相关内容的占比 / 全部相关内容被检索回来的占比 | [RAGAS Context Precision](https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/context_precision/) |
+| context precision / context recall | 上下文精确率 / 召回率 | 检索到的上下文中相关内容的占比 / 全部相关内容被检索回来的占比 | [Context Precision](https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/context_precision/) ／ [Context Recall](https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/context_recall/) |
 | BEIR | 异构检索基准 | 覆盖 18 个数据集、跨任务跨领域的零样本检索评测基准 | [BEIR 论文](https://arxiv.org/abs/2104.08663) |
 
 ## 4. Agent
@@ -58,7 +58,7 @@
 | progress rate | 进度率 | 把任务成功分解为可计分子目标，刻画每步增量进展，而非只看最终成败 | [AgentBoard](https://arxiv.org/abs/2401.13178) |
 | tool call accuracy | 工具调用准确性 | Agent 是否选对工具、传对参数并正确使用返回结果的比例 | [RAGAS 指标总览](https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/) |
 | cost & latency | 成本与延迟 | 完成任务所花的 token/金额与耗时，与准确率同等重要的工程指标 | [HAL](https://arxiv.org/abs/2510.11977) |
-| τ³-bench | τ³ 基准 | 在多轮对话中模拟用户、要求 Agent 调用 API 并遵守业务规则，用 pass^k 衡量可靠性（由 τ-bench 演化而来） | [现役仓库](https://github.com/sierra-research/tau2-bench) |
+| τ³-bench | τ³ 基准 | 在多轮对话中模拟用户、要求 Agent 调用 API 并遵守业务规则，用 pass^k 衡量可靠性（**原 τ-bench 已废弃**，现役为 τ³-bench） | [现役仓库](https://github.com/sierra-research/tau2-bench) |
 | SWE-bench | 软件工程基准 | 以真实 GitHub issue 为任务、以测试是否通过判分的软件工程 Agent 基准 | [SWE-bench 论文](https://arxiv.org/abs/2310.06770) |
 | WebArena | 网页 Agent 基准 | 在四个自建真实网站环境里执行端到端网页任务、以最终状态判分的基准 | [WebArena 论文](https://arxiv.org/abs/2307.13854) |
 | OSWorld | 电脑操作基准 | 在真实操作系统桌面环境中执行跨应用任务、采用执行式评估的基准 | [OSWorld 论文](https://arxiv.org/abs/2404.07972) |

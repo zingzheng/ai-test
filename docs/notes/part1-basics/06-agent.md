@@ -15,7 +15,7 @@
 - **多轮（multi-turn）**：交互轮数不固定，早期一步走错可能后面全崩。
 - **长程（long-horizon）**：一个任务可能几十步，错误会累积，成功与否带强随机性。
 
-由此，评测的核心指标从"答案准确率"变成**执行式任务成功率（task success rate）**：多数基准直接比对任务的**最终状态**，而非 Agent 说了什么（τ³-bench 就是比对对话结束时数据库状态与标注目标状态）。
+由此，评测的核心指标从"答案准确率"变成**执行式任务成功率（task success rate）**：多数基准直接比对任务的**最终状态**，而非 Agent 说了什么（τ-bench 家族即比对对话结束时数据库状态与标注目标状态）。
 
 > 来源：[τ-bench 论文](https://arxiv.org/abs/2406.12045)
 
@@ -30,7 +30,7 @@ Agent 的"域"差别太大，很难有一个通用考卷。下表按任务场景
 | 网页 | **WebArena** | 4 类真实网站环境（电商/论坛/协作开发/CMS）的端到端网页任务 |
 | 电脑操作 | **OSWorld** | 真实 Ubuntu/Windows/macOS 环境，369 个跨应用任务、执行式评估 |
 | 通用助理 | **GAIA** | 466 道"对人类简单、对 AI 难"的真实问题，需推理+多模态+浏览+工具 |
-| 工具-用户对话 | **τ³-bench** | 用 LLM 模拟用户，评测多轮对话中调用 API、遵守业务规则；提出 **pass^k** |
+| 工具-用户对话 | **τ³-bench** | 用 LLM 模拟用户，评测多轮对话中调用 API、遵守业务规则；**pass^k** 由原 τ-bench 提出、τ³ 沿用 |
 | 多环境综合 | **AgentBench** / **AgentBoard** | 8 个交互环境评测 LLM-as-Agent；AgentBoard 强调细粒度 **progress rate** |
 | 成本敏感榜单 | **HAL**（Holistic Agent Leaderboard） | 标准化 harness + 榜单，默认纳入**成本** |
 
@@ -49,9 +49,9 @@ Agent 的"域"差别太大，很难有一个通用考卷。下表按任务场景
 - **轨迹评估（trajectory evaluation）与 progress rate**：把整条操作序列当评分对象，刻画每一步的增量进展，而不是只在最后判定生死。AgentBoard 是这方面的代表。
 - **工具调用正确性（tool-call correctness）**：工具是否被正确选择、参数是否正确。RAGAS 提供 Tool Call Accuracy / Tool Call F1；DeepEval 有 Tool Correctness / Argument Correctness；TruLens 有 ToolSelection / ToolCalling / ToolQuality。
 - **成本与延迟（cost & latency）**：同一成功率可能对应 10 倍成本。HAL 把成本作为一等指标，是成本敏感评测的标杆。动机可参考《AI Agents That Matter》。
-- **pass^k 可靠性**：同一任务重复 k 次**全部**成功的概率，衡量"稳定"而非"碰运气"。τ-bench 给出过 retail 域上 GPT-4o 从 Pass^1=0.604 掉到 Pass^4=0.383 的例子——单次跑分漂亮，重复跑就露馅。
+- **pass^k 可靠性**：同一任务重复 k 次**全部**成功的概率，衡量"稳定"而非"碰运气"。τ-bench 给出过 retail 域上 GPT-4o 从 pass^1=0.604 掉到 pass^4=0.383 的例子——单次跑分漂亮，重复跑就露馅。
 
-> 来源：[AgentBoard 论文](https://arxiv.org/abs/2401.13178)、[RAGAS 指标文档](https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/)、[DeepEval 指标文档](https://docs.confident-ai.com/docs/metrics-introduction)、[TruLens 仓库](https://github.com/truera/trulens)、[HAL 论文](https://arxiv.org/abs/2510.11977)、[AI Agents That Matter](https://arxiv.org/abs/2407.01502)
+> 来源：[AgentBoard 论文](https://arxiv.org/abs/2401.13178)、[RAGAS 指标文档](https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/)、[DeepEval 指标文档](https://docs.confident-ai.com/docs/metrics-introduction)、[TruLens 仓库](https://github.com/truera/trulens)、[HAL 论文](https://arxiv.org/abs/2510.11977)、[AI Agents That Matter](https://arxiv.org/abs/2407.01502)、[τ-bench 论文](https://arxiv.org/abs/2406.12045)（pass^k 与上述 retail 数据出处）
 
 ## 6.4 组件级 vs 端到端
 

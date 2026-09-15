@@ -36,7 +36,7 @@
 - 备注：**写教程用 `microsoft/PyRIT`，`Azure/PyRIT` 已过时。**
 
 ### 7. OWASP Top 10 for LLM Applications（⚠️ 已换版）
-- **2026 版已发布（2026-08-04）**，风险排序与范围更新，并映射 NIST / MITRE ATLAS / CWE / OWASP Agentic Top10。
+- **2026 版已发布（2026-08-03，以官方发布页日期为准）**，风险排序与范围更新，并映射 NIST / MITRE ATLAS / CWE / OWASP Agentic Top10。
 - 2026 现行清单：1 Prompt Injection；2 Sensitive Information Disclosure；3 Excessive Agency；4 Supply Chain；5 Data and Model Poisoning；6 Unbounded Consumption；7 Misinformation；8 Hidden Context Exposure；9 Vector and Embedding Weaknesses；10 Improper Output Handling
 - 来源：2026 发布页 ✅ https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/ ／ 规范源 ✅ https://github.com/GenAI-Security-Project/GenAI-LLM-Top10 ／ 旧入口（2023 v1.1 存档）✅ https://owasp.org/www-project-top-10-for-large-language-model-applications/
 - 备注：旧版 v1.1 与 2026 版**不同**，务必标版本号。

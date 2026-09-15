@@ -34,7 +34,7 @@
 | 组织迁移 | PyRIT：`Azure/` → **`microsoft/`**（旧仓库归档只读） | 2026-03-27 | [microsoft/PyRIT](https://github.com/microsoft/PyRIT) |
 | 组织迁移 | OTel GenAI semconv 从主 semconv **拆为独立仓库** | 2025 起 | [semantic-conventions-genai](https://github.com/open-telemetry/semantic-conventions-genai) |
 | 组织迁移 | FlagEval 主代码迁至 `flageval-baai` 组织 | — | [FlagOpen/FlagEval](https://github.com/FlagOpen/FlagEval) |
-| 版本更新 | OWASP LLM Top 10 **2026 版**发布，风险排序与范围不同于 2023 v1.1 | 2026-08-04 | [OWASP 2026 发布页](https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/)、[规范源](https://github.com/GenAI-Security-Project/GenAI-LLM-Top10) |
+| 版本更新 | OWASP LLM Top 10 **2026 版**发布，风险排序与范围不同于 2023 v1.1 | 2026-08-03 | [OWASP 2026 发布页](https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/)、[规范源](https://github.com/GenAI-Security-Project/GenAI-LLM-Top10) |
 | 版本更新 | TC260《人工智能安全治理框架 **3.0**》发布 | 2026-09-14 | [TC260 新闻页](https://www.tc260.org.cn/tc260/xwdt1/202609/d513a007d04347f58e483fabaefb34b8.shtml) |
 | 版本更新 | C-Eval 公开完整测试集（此前测试集不公开） | 2025-07-27 | [C-Eval 仓库](https://github.com/hkust-nlp/ceval) |
 | 平台关停/退场 | OpenAI Evals 平台：转只读 → 关停，官方建议改用 Datasets | 2026-10-31 / 2026-11-30 | [OpenAI Evals 指南](https://platform.openai.com/docs/guides/evals) |
@@ -57,7 +57,7 @@
 
 **④ 评测饱和。** MMLU 饱和后被 MMLU-Pro 取代，但对前沿模型而言，新基准的"有效期"越来越短。ABC 清单进一步指出，现存 agentic benchmark 的缺陷（测试用例不足、把空响应当成功）可导致**相对误差高达 100%**。饱和与"榜单失真"是同一枚硬币的两面。来源：[MMLU-Pro](https://arxiv.org/abs/2406.01574)、[ABC 清单](https://arxiv.org/abs/2507.02825)。
 
-**⑤ judge 的分辨率。** 一味去除偏差会压低 judge 的分辨率——把真实差距误判为 Tie；有研究因此呼吁联合报告 bias suppression / resolution / Tie cost，且该结论来自 2026 预印本，尚待同行评审。Agent-as-Judge 则试图用 agent 评 agent 来补足中间反馈。来源：[去偏即测量干预](https://arxiv.org/abs/2609.12439)、[LLM-as-a-Judge 综述](https://arxiv.org/abs/2411.15594)、[Agent-as-Judge](https://arxiv.org/abs/2410.10934)。
+**⑤ judge 的分辨率。** 一味去除偏差会压低 judge 的分辨率——把真实差距误判为 Tie；有研究因此呼吁联合报告 bias suppression / resolution / Tie cost（该工作已被 EMNLP 2026 接收）。Agent-as-Judge 则试图用 agent 评 agent 来补足中间反馈。来源：[去偏即测量干预](https://arxiv.org/abs/2609.12439)、[LLM-as-a-Judge 综述](https://arxiv.org/abs/2411.15594)、[Agent-as-Judge](https://arxiv.org/abs/2410.10934)。
 
 ## 16.4 怎么保持不过时
 
@@ -108,7 +108,7 @@
 - [Azure/PyRIT（旧，已归档）](https://github.com/Azure/PyRIT) — 访问 2026-09-15 — ✅ — 2026-03-27 归档
 - [semantic-conventions-genai](https://github.com/open-telemetry/semantic-conventions-genai) — 访问 2026-09-15 — ✅ — OTel GenAI 拆仓
 - [FlagOpen/FlagEval](https://github.com/FlagOpen/FlagEval) — 访问 2026-09-15 — ✅ — 迁至 flageval-baai
-- [OWASP LLM Top 10 2026](https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/) — 访问 2026-09-15 — ✅ — 2026-08-04 发布
+- [OWASP LLM Top 10 2026](https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/) — 访问 2026-09-15 — ✅ — 2026-08-03 发布
 - [OWASP GenAI-LLM-Top10 规范源](https://github.com/GenAI-Security-Project/GenAI-LLM-Top10) — 访问 2026-09-15 — ✅ — 2026 规范
 - [OWASP 旧版（2023 v1.1）](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — 访问 2026-09-15 — ✅ — 版本对照
 - [TC260 新闻页（治理框架 3.0）](https://www.tc260.org.cn/tc260/xwdt1/202609/d513a007d04347f58e483fabaefb34b8.shtml) — 访问 2026-09-15 — ✅ — 2026-09-14 发布
@@ -127,7 +127,7 @@
 - [Anthropic：基础设施噪声](https://www.anthropic.com/engineering/infrastructure-noise) — 访问 2026-09-15 — ✅ — 6pp 摆动
 - [AI Agents That Matter](https://arxiv.org/abs/2407.01502) — 访问 2026-09-15 — ✅ — 成本与可复现性
 - [Agentic Benchmark Checklist（ABC）](https://arxiv.org/abs/2507.02825) — 访问 2026-09-15 — ✅ — 相对误差可达 100%
-- [去偏即测量干预（judge 分辨率）](https://arxiv.org/abs/2609.12439) — 访问 2026-09-15 — ✅ — 预印本，待同行评审
+- [去偏即测量干预（judge 分辨率）](https://arxiv.org/abs/2609.12439) — 访问 2026-09-15 — ✅ — 已被 EMNLP 2026 接收
 - [LLM-as-a-Judge 综述](https://arxiv.org/abs/2411.15594) — 访问 2026-09-15 — ✅ — judge 可靠性
 - [Agent-as-Judge](https://arxiv.org/abs/2410.10934) — 访问 2026-09-15 — ✅ — 用 agent 评 agent
 - [EleutherAI lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) — 访问 2026-09-15 — ✅ — 持续活跃可追踪

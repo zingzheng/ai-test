@@ -4,7 +4,7 @@
 
 ---
 
-> 本章对应第 4 章建议的「大厂方法论拆解」。四家厂商是 AI 评测实践的天花板，读它们的一手文档，比读二手总结更能建立正确心智。
+> 本章进入「企业落地」部分的核心之一：拆解四家厂商的官方测评方法论。它们是 AI 评测实践的天花板，读一手文档比读二手总结更能建立正确心智。
 
 ## 10.1 为什么要看大厂方法论
 
@@ -56,11 +56,13 @@ Google Cloud 的评测文档现已迁到 **Gemini Enterprise Agent Platform** �
 
 > 来源：[Gemini Enterprise Agent Platform 评测总览](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/evaluation-overview) — ✅（原 Vertex AI 链接重定向）
 
-## 10.5 Microsoft Azure AI Foundry Evaluation SDK
+## 10.5 Microsoft Foundry Evaluation SDK
 
-Azure 走「开箱即用」路线：内置 evaluator 分成 **General / 文本相似度 / RAG / 风险与安全 / Agentic / AzureOpenAI graders** 几大类，通过统一的 `evaluate()` API 调用，支持 JSONL、多轮 conversation 与多模态输入。一个值得注意的透明度差异：**质量类 evaluator 的 prompt 是开源的，风险/安全类不开源**——安全评测的可解释性因此弱于质量评测。
+Azure 走「开箱即用」路线：内置 evaluator 分成 **General / 文本相似度 / RAG / 风险与安全 / Agentic / AzureOpenAI graders** 几大类，通过统一的 `evaluate()` API 调用，支持 JSONL、多轮 conversation 与多模态输入。一个值得注意的透明度差异：**质量类 evaluator 的 prompt 是开源的，风险/安全类与 `GroundednessProEvaluator` 不开源**——安全评测的可解释性因此弱于质量评测。
 
-> 来源：[Azure AI Foundry Evaluation SDK](https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/develop/evaluate-sdk) — ✅
+> **命名时效**：该产品已由 "Azure AI Foundry" 演进为 **Microsoft Foundry**；本文引用的 `evaluate-sdk` 文档页现标题为「…(classic) - Microsoft Foundry (classic) portal」，并声明**不适用于新版 Foundry portal**。引用时注意其 classic 定位。
+>
+> 来源：[Local Evaluation with the Azure AI Evaluation SDK (classic)](https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/develop/evaluate-sdk) — ✅
 
 ## 10.6 四家共识与分歧
 
@@ -69,7 +71,7 @@ Azure 走「开箱即用」路线：内置 evaluator 分成 **General / 文本�
 | 主要形态 | 工程博客方法论 | Evals API + 开源框架 | 云平台评测服务 | Evaluation SDK |
 | 核心抓手 | task/trial/grader/harness | `testing_criteria`(graders) | rubric + **AutoSxS** 成对比较 | 六大类内置 evaluator |
 | grader 主张 | 混合 code/model/human | 程序化 + model-graded 模板 | rubric metrics + judge | 预制 + AzureOpenAI graders |
-| 独特贡献 | pass@k / pass^k、8 步路线、Swiss Cheese | 平台化 API、开源 registry | 成对评测工程化 | 开箱即用、多模态/多轮 |
+| 独特贡献 | pass@k / pass^k、Step 0–8 路线、Swiss Cheese | 平台化 API、开源 registry | 成对评测工程化 | 开箱即用、多模态/多轮 |
 | 透明度 | 高（全公开） | 高（仓库开源） | 中 | 质量类开源，安全类不开源 |
 | 2026 时效 | 现役 | **2026-11-30 关停** | 品牌迁移 | 现役 |
 

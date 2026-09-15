@@ -18,7 +18,7 @@
 | ROC-AUC | 排序意义上"正样本得分高于负样本"的概率 | 不平衡时仍可能虚高；AUC=0.5 等价随机 |
 | PR-AUC / AP | Precision-Recall 曲线下面积 | 不平衡、且更关心正类时优先用 |
 
-最经典的"指标骗人"案例来自 Google 的教程：在 99:1 的不平衡数据里，**全预测成负类也能拿到 99% accuracy**，但此时 Recall=0，系统毫无价值。所以答案是：它把两类错误当成同等代价。
+最经典的"指标骗人"案例来自 Google 的教程：在 99:1 的不平衡数据里，**全预测成负类也能拿到 99% accuracy**，但此时 Recall=0，系统毫无价值。根本原因是：accuracy 默认把两类错误当成了同等代价。
 
 > 来源：[Precision and Recall（Google ML Crash Course）](https://developers.google.com/machine-learning/crash-course/classification/precision-and-recall) — ✅
 > 来源：[Imbalanced Datasets（Google ML Crash Course）](https://developers.google.com/machine-learning/crash-course/overfitting/imbalanced-datasets) — ✅
@@ -126,7 +126,7 @@ ImageNet 长期用 **Top-1 / Top-5 accuracy** 作为协议；但 **ILSVRC 挑战
 
 > 来源：[GLUE](https://arxiv.org/abs/1804.07461)、[SuperGLUE](https://arxiv.org/abs/1905.00537)、[SQuAD 榜单](https://rajpurkar.github.io/SQuAD-explorer/)、[SQuAD 2.0](https://arxiv.org/abs/1806.03822) — ✅
 
-**为何 LLM 时代转向 LLM-as-Judge**：开放生成答案不唯一，n-gram 指标既惩罚合理同义改写、又奖励空洞重叠。MT-Bench / Chatbot Arena 证明强 LLM 裁判与人类偏好一致率可 **>80%**，与人类标注者间一致率相当；但必须警惕位置偏差、冗长偏差、自我增强偏差（校准详见第 2、4、15 章）。
+**为何 LLM 时代转向 LLM-as-Judge**：开放生成答案不唯一，n-gram 指标既惩罚合理同义改写、又奖励空洞重叠。MT-Bench / Chatbot Arena 证明强 LLM 裁判与人类偏好一致率可 **>80%**，与人类标注者间一致率相当；但必须警惕位置偏差、冗长偏差、自我增强偏差（校准详见第 2、4、13、15 章）。
 
 > 来源：[Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena](https://arxiv.org/abs/2306.05685) — ✅
 
