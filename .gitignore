@@ -1,0 +1,8 @@
+# honkit 构建产物
+_book/
+node_modules/
+
+# 本地服务
+*.log
+*.pid
+.DS_Store
