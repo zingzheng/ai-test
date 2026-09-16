@@ -1,6 +1,9 @@
-# AI Test · 大模型与 Agent 测评笔记
+# AI Test · 内部完整版目录
 
-* [导读](README.md)
+> 内部版 = 公开版 + 「项目需求说明书」+ 「附录 E 测评岗位能力地图」。
+> 构建：`./serve.sh build-internal` → 输出 `_book-internal/`（**不对外发布**）。
+
+* [项目需求说明书（内部）](docs/REQUIREMENTS.md)
 
 ## 第一部分 · 基础知识
 
@@ -33,3 +36,4 @@
 * [B. 权威来源总清单](SOURCES.md)
 * [C. 时效地图](docs/notes/appendix/C-freshness-map.md)
 * [D. 模型训练与调优速览](docs/notes/appendix/D-training.md)
+* [E. 测评岗位能力地图（内部）](docs/notes/appendix/E-career-map.md)

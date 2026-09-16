@@ -1,0 +1,19 @@
+# 内部文档与工具文件：不得进入公开构建产物（_book）
+# honkit 会把未列入 SUMMARY 的文件也原样拷贝，因此必须在这里显式排除。
+
+# 项目需求说明书（内部）
+docs/REQUIREMENTS.md
+
+# 原始调研素材（内部工作稿）
+docs/research/
+
+# 附录 E 测评岗位能力地图（私人求职向）
+docs/notes/appendix/E-career-map.md
+
+# 内部构建清单
+SUMMARY-internal.md
+
+# 工具与仓库元文件
+serve.sh
+.gitignore
+.bookignore

@@ -1,5 +1,6 @@
 # honkit 构建产物
 _book/
+_book-internal/
 node_modules/
 
 # 本地服务
