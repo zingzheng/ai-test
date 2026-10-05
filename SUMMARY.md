@@ -33,3 +33,4 @@
 * [B. 权威来源总清单](SOURCES.md)
 * [C. 时效地图](docs/notes/appendix/C-freshness-map.md)
 * [D. 模型训练与调优速览](docs/notes/appendix/D-training.md)
+* [F. 测评面筋：AI Agent 面试真题与答案](docs/notes/appendix/F-agent-interview.md)

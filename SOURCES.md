@@ -3,7 +3,7 @@
 > 本文件是 `ai-test` 项目的**唯一来源真相源（Single Source of Truth for References）**。
 > 每条 URL 的验证状态与访问日期见 `docs/research/`。
 > 图例：✅ 实测可访问且内容吻合　⚠️ 可访问但未解析　❌ 本次无法访问（不代表永久失效）
-> 首次整理：2026-09-15
+> 首次整理：2026-09-15；2026-10-05 增补 R / S 节（附录 F 引用）。
 
 ---
 
@@ -279,5 +279,48 @@
 | Adapter | https://arxiv.org/abs/1902.00751 | ✅ |
 | Prefix Tuning | https://arxiv.org/abs/2101.00190 | ✅ |
 | Prompt Tuning | https://arxiv.org/abs/2104.08691 | ✅ |
+
+## R. Agent 工程 / 协议 / 框架（附录 F 引用）
+
+| 主题 | 来源 | 状态 |
+|---|---|---|
+| Anthropic《Building Effective Agents》 | https://www.anthropic.com/engineering/building-effective-agents | ✅ |
+| Anthropic《Effective context engineering for AI agents》 | https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents | ✅ |
+| Anthropic《Claude Code Best Practices》 | https://www.anthropic.com/engineering/claude-code-best-practices | ✅ |
+| ReAct（论文） | https://arxiv.org/abs/2210.03629 | ✅ |
+| Reflexion（论文） | https://arxiv.org/abs/2303.11366 | ✅ |
+| LLM Compiler（并行工具调用） | https://arxiv.org/abs/2312.04511 | ✅ |
+| Tree of Thoughts | https://arxiv.org/abs/2305.10601 | ✅ |
+| Self-Refine | https://arxiv.org/abs/2303.17651 | ✅ |
+| MemGPT（分层记忆） | https://arxiv.org/abs/2310.08560 | ✅ |
+| Generative Agents | https://arxiv.org/abs/2304.03442 | ✅ |
+| CoALA（记忆分类） | https://arxiv.org/abs/2309.02427 | ✅ |
+| Mem0 | https://arxiv.org/abs/2504.19413 | ✅ |
+| Zep（时序知识图谱记忆） | https://arxiv.org/abs/2501.13956 | ✅ |
+| Lost in the Middle | https://arxiv.org/abs/2307.03172 | ✅ |
+| 间接提示注入（Greshake et al.） | https://arxiv.org/abs/2302.12173 | ✅ |
+| Corrective RAG | https://arxiv.org/abs/2401.15884 | ✅ |
+| Self-RAG | https://arxiv.org/abs/2310.11511 | ✅ |
+| MCP 规范 | https://modelcontextprotocol.io/specification/ | ✅ |
+| A2A 协议 | https://a2a-protocol.org/latest/ | ✅ |
+| OpenAI Function Calling 文档 | https://platform.openai.com/docs/guides/function-calling | ✅ |
+| XGrammar（约束解码） | https://github.com/mlc-ai/xgrammar | ✅ |
+| LangGraph | https://github.com/langchain-ai/langgraph | ✅ |
+| AutoGen | https://github.com/microsoft/autogen | ✅ |
+| CrewAI | https://github.com/crewAIInc/crewAI | ✅ |
+| LlamaIndex | https://github.com/run-llama/llama_index | ✅ |
+
+## S. 面试面经与题库（二手来源，附录 F 引用）
+
+| 主题 | 来源 | 状态 |
+|---|---|---|
+| 面灵AI《AI Agent 面试题与八股文汇总：155 道大厂真题（2026 面经）》 | https://www.mianlingai.com/topics/ai-agent-interview-questions-2026/ | ✅ |
+| 小林coding《2026 最全 AI 大模型面试题 / Agent 面试题》 | https://xiaolincoding.com/project/xiaolinnote.html | ✅ |
+| 代码随想录《2026 最全大模型面经汇总》 | https://programmercarl.com/qita/0022.llminterview.html | ✅ |
+| Imironman123/llm-interview-notes（Agent 专题 22 题） | https://github.com/Imironman123/llm-interview-notes | ✅ |
+| DolbyUUU/Awesome-LLM-Interview-Questions-and-Answers | https://github.com/DolbyUUU/Awesome-LLM-Interview-Questions-and-Answers | ✅ |
+| MisterBooo/llm-interview-questions（Agent 模块 8 题） | https://github.com/MisterBooo/llm-interview-questions | ✅ |
+| wdndev/llm_interview_note | https://github.com/wdndev/llm_interview_note | ✅ |
+| 牛客网面经帖（需登录，未解析全文） | https://www.nowcoder.com/discuss/878600528970735616 | ⚠️ |
 
 > ⚠️ 未验证项：Q-learning 原始 Springer 页（DOI 10.1007/BF00992698，反爬）；BLEURT 常被误引为 arXiv 2005.01535（实为 2004.04696）。

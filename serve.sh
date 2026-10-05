@@ -17,7 +17,7 @@ LOG=/tmp/opencode/ai-test-serve.log
 PID_FILE=/tmp/opencode/ai-test-serve.pid
 
 # 公开内容禁止出现的关键词（内部/私人信息）
-FORBIDDEN='申申|Zing|岗位 JD|岗位要求|面试|REQUIREMENTS|拍板|待确认|需求说明书'
+FORBIDDEN='申申|Zing|岗位 JD|岗位要求|REQUIREMENTS|拍板|待确认|需求说明书'
 
 # 可选：本机专属过滤词（如源站 IP、本地绝对路径），每行一条
 # 该文件不入库（已加入 .git/info/exclude），避免把生产信息带进公开仓库

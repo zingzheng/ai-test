@@ -37,3 +37,4 @@
 * [C. 时效地图](docs/notes/appendix/C-freshness-map.md)
 * [D. 模型训练与调优速览](docs/notes/appendix/D-training.md)
 * [E. 测评岗位能力地图（内部）](docs/notes/appendix/E-career-map.md)
+* [F. 测评面筋：AI Agent 面试真题与答案](docs/notes/appendix/F-agent-interview.md)
